@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="multikart">
+    <meta name="keywords" content="multikart">
+    <meta name="author" content="multikart">
+    <link rel="icon" href="../assets/images/favicon/20.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon/20.png" type="image/x-icon">
+    <title>@ViewData["Title"] - DevElectronic_Store</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DevElectronic_Store.styles.css" asp-append-version="true" />
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/font-awesome.css">
+
+    <!--Slick slider css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/slick-theme.css">
+
+    <!-- Animate icon -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
+
+    <!-- Themify icon -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify-icons.css">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+
+    <!-- Theme css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+</head>
+<body class="theme-color-23">
+    <div class="loader-skeleton">
+        <header class="header-style-5">
+            <div class="top-header top-header-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="header-contact">
+                                <ul>
+                                    <li><i aria-hidden="true"></i>Bem Vindo ao nosso Mercado de Eletronicos</li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>Call Us: 314 - 437 - 8254</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-end">
+                            <ul class="header-dropdown">
+                                <li class="mobile-wishlist">
+                                    <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="onhover-dropdown mobile-account">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    My Account
+                                    <ul class="onhover-show-div">
+                                        <partial name="_LoginPartial" />
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="main-menu">
+                            <div class="menu-left">
+                                <div class="navbar d-block d-xl-none">
+                                    <a href="javascript:void(0)">
+                                        <div class="bar-style" id="toggle-sidebar-res">
+                                            <i class="fa fa-bars sidebar-bar"
+                                               aria-hidden="true"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="brand-logo">
+                                    <a asp-controller="Catalogo" asp-action="Index">
+                                        <img src="../assets/images/icon/logo/29.png"
+                                             alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <form class="form_search" role="form">
+                                    <input id="query search-autocomplete" type="search"
+                                           placeholder="Search any Device or Gadgets..."
+                                           class="nav-search nav-search-field" aria-expanded="true">
+                                    <button type="submit" name="nav-submit-button" class="btn-search">
+                                        <i class="ti-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="menu-right pull-right">
+                                <nav class="text-start">
+                                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                                </nav>
+                                <div>
+                                    <div class="icon-nav d-none d-sm-block">
+                                        <ul>
+                                            <li class="onhover-div d-xl-none d-inline-block mobile-search">
+                                                <div>
+                                                    <img src="../assets/images/icon/search.png" alt=""> <i class="ti-search"></i>
+                                                </div>
+                                            </li>
+                                            <li class="onhover-div mobile-setting">
+                                                <div>
+                                                    <img src="../assets/images/icon/setting.png" alt=""> <i class="ti-settings"></i>
+                                                </div>
+                                            </li>
+                                            <li class="onhover-div mobile-cart">
+                                                <div>
+                                                    <img src="../assets/images/icon/cart.png" alt=""> <i class="ti-shopping-cart"></i>
+                                                </div>
+                                                <span class="cart_qty_cls">2</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-part bottom-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="category-menu d-none d-xl-block h-100">
+                                <div class="toggle-sidebar">
+                                    <i class="fa fa-bars sidebar-bar"></i>
+                                    <h5 class="mb-0">shop by category</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="main-nav-center">
+                                <nav class="text-start">
+                                    <!-- Sample menu definition -->
+                                    <ul class="sm pixelstrap sm-horizontal">
+                                        <li>
+                                            <div class="mobile-back text-end">
+                                                Back<i class="fa fa-angle-right ps-2"
+                                                       aria-hidden="true"></i>
+                                            </div>
+                                        </li>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class="mega"><a href="#">feature <div class="lable-nav">new</div></a></li>
+                                        <li><a href="#">shop</a> </li>
+                                        <li><a href="#">product</a> </li>
+                                        <li><a href="#">pages</a> </li>
+                                        <li><a href="#">blog</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!-- footer section start -->
+    <footer class="dark-footer footer-style-1">
+        <section class="section-b-space darken-layout">
+            <div class="container">
+                <div class="row footer-theme partition-f">
+                    <div class="col-lg-4 col-md-6 sub-title">
+                        <div class="footer-title footer-mobile-title">
+                            <h4>about</h4>
+                        </div>
+                        <div class="footer-contant">
+                            <div class="footer-logo"><img src="../assets/images/icon/logo/f10.png" alt=""></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore
+                            </p>
+                            <ul class="contact-list">
+                                <li>
+                                    <i class="fa fa-map-marker"></i>Multikart Demo Store, Demo store India 345-659
+                                </li>
+                                <li><i class="fa fa-phone"></i>Call Us: 123-456-7898</li>
+                                <li><i class="fa fa-envelope"></i>Email Us: <a href="#">Support@Multikart.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>my account</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul>
+                                    <li><a href="#">mens</a></li>
+                                    <li><a href="#">womens</a></li>
+                                    <li><a href="#">clothing</a></li>
+                                    <li><a href="#">accessories</a></li>
+                                    <li><a href="#">featured</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>information</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <ul>
+                                    <li><a href="#">shipping & return</a></li>
+                                    <li><a href="#">secure shopping</a></li>
+                                    <li><a href="#">gallary</a></li>
+                                    <li><a href="#">affiliates</a></li>
+                                    <li><a href="#">contacts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="sub-title">
+                            <div class="footer-title">
+                                <h4>follow us</h4>
+                            </div>
+                            <div class="footer-contant">
+                                <p class="mb-cls-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt
+                                    ut labore
+                                </p>
+                                <form class="form-inline">
+                                    <div class="form-group me-sm-3 mb-2">
+                                        <label for="inputPassword2" class="sr-only">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword2"
+                                               placeholder="Enter Your Email">
+                                    </div>
+                                    <button type="submit" class="btn btn-solid mb-2">subscribe</button>
+                                </form>
+                                <div class="footer-social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="sub-footer dark-subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6 col-sm-12">
+                        <div class="footer-end">
+                            <p>
+                                <i class="fa fa-copyright" aria-hidden="true"></i> 2023-24 themeforest powered by
+                                pixelstrap
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-sm-12">
+                        <div class="payment-card-bottom">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="../assets/images/icon/visa.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="../assets/images/icon/mastercard.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="../assets/images/icon/paypal.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="../assets/images/icon/american-express.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="../assets/images/icon/discover.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
