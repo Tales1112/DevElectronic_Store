@@ -1,4 +1,6 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 
 namespace DevElectronic_Store.Identidade.API.Configuration
 {
@@ -10,8 +12,8 @@ namespace DevElectronic_Store.Identidade.API.Configuration
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "DevElectronic Enterprise Identity Api",
-                    Description = "Está API faz parte do meu estudo diário",
+                    Title = "NerdStore Enterprise Identity Api",
+                    Description = "Esta API faz parte do curso ASP.NET core Enterprise Applications.",
                     Contact = new OpenApiContact() { Name = "Tales Silva", Email = "Tales.trab@gmail.com" }
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
