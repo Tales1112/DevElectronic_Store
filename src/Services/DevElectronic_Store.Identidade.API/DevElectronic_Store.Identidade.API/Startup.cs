@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace DevElectronic_Store.Identidade.API
 {
@@ -28,8 +29,10 @@ namespace DevElectronic_Store.Identidade.API
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentityConfiguration(Configuration);
             services.AddApiConfiguration();
             services.AddSwaggerConfiguration();
+            services.AddMessageBusConfiguration(Configuration);
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
