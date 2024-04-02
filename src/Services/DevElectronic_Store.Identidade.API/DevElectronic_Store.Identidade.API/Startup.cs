@@ -1,4 +1,5 @@
 using DevElectronic_Store.Identidade.API.Configuration;
+using DevElectronic_Store.Identidade.API.Services.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -31,6 +32,7 @@ namespace DevElectronic_Store.Identidade.API
         {
             services.AddIdentityConfiguration(Configuration);
             services.AddApiConfiguration();
+            services.AddHttpClient<IAuthenticationService, AuthenticationService>();
             services.AddSwaggerConfiguration();
             services.AddMessageBusConfiguration(Configuration);
         }

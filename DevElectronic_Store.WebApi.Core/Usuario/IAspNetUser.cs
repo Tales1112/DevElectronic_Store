@@ -11,7 +11,7 @@ namespace DevElectronic_Store.WebApi.Core.Usuario
 
         bool EstaAutenticado();
         IEnumerable<Claim> ObterClaims();
-        HttpContext obterHttpContext();
+        HttpContext ObterHttpContext();
         string ObterUserEmail();
         Guid ObterUserId();
         string ObterUserRefreshToken();

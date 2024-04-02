@@ -30,8 +30,4 @@
     <ProjectReference Include="..\..\..\..\DevElectronic_Store.WebApi.Core\DevElectronic_Store.WebApi.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

@@ -3,5 +3,6 @@
     public class AppSettings
     {
         public string AutenticacaoJwksUrl { get; set; }
+        public string ClienteUrl { get; set; }
     }
 }

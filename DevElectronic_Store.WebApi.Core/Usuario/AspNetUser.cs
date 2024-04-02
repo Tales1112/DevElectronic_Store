@@ -38,7 +38,7 @@ namespace DevElectronic_Store.WebApi.Core.Usuario
         {
             return _accessor.HttpContext.User.Claims;
         }
-        public HttpContext obterHttpContext()
+        public HttpContext ObterHttpContext()
         {
             return _accessor.HttpContext;
         }

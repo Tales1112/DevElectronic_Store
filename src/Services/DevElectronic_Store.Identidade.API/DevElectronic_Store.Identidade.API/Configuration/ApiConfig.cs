@@ -1,4 +1,6 @@
-﻿using DevElectronic_Store.WebApi.Core.Identidade;
+﻿using DevElectronic_Store.Identidade.API.Services.Interface;
+using DevElectronic_Store.WebApi.Core.Identidade;
+using DevElectronic_Store.WebApi.Core.Usuario;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +14,8 @@ namespace DevElectronic_Store.Identidade.API.Configuration
         public static IServiceCollection AddApiConfiguration(this IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IAspNetUser, AspNetUser>();
             return services;
         }
         public static IApplicationBuilder UserApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
